@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+st.set_page_config(layout="wide")
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 
