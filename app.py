@@ -11,14 +11,14 @@ df = pd.read_excel(excel_file,
 				usecols='A:E',
 				header=0)
 
-gb = GridOptionsBuilder.from_dataframe(data)
+gb = GridOptionsBuilder.from_dataframe(df)
 gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 gb.configure_side_bar() #Add a sidebar
 gb.configure_selection('multiple', use_checkbox=True, groupSelectsChildren="Group checkbox select children") #Enable multi-row selection
 gridOptions = gb.build()
 
 grid_response = AgGrid(
-    data,
+    df,
     gridOptions=gridOptions,
     data_return_mode='AS_INPUT', 
     update_mode='MODEL_CHANGED', 
