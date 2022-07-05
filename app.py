@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import st_aggrid
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 
