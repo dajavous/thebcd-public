@@ -30,7 +30,6 @@ grid_response = AgGrid(
     reload_data=True
 )
 
-st.dataframe(df)
 
 
 
