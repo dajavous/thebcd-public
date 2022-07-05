@@ -14,7 +14,6 @@ df = pd.read_excel(excel_file,
 gb = GridOptionsBuilder.from_dataframe(df)
 gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 gb.configure_side_bar() #Add a sidebar
-gb.configure_selection('multiple', use_checkbox=True, groupSelectsChildren="Group checkbox select children") #Enable multi-row selection
 gridOptions = gb.build()
 
 grid_response = AgGrid(
@@ -26,7 +25,7 @@ grid_response = AgGrid(
     theme='blue', #Add theme color to the table
     enable_enterprise_modules=True,
     height=400, 
-    width=1200,
+    width='100%',
     reload_data=True
 )
 
