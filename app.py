@@ -1,10 +1,6 @@
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title='Newsletter and Magazine Index')
-st.header('BCD Newsletter and Magazine Index')
-st.subheader('Sort and search for keywords and articles')
-
 excel_file = 'Newsletter-and-Magazine-Index.xlsx'
 sheet_name = 'Sheet1'
 
