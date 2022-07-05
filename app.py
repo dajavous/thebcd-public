@@ -9,7 +9,7 @@ df = pd.read_excel(excel_file,
 				usecols='A:E',
 				header=0)
 
-st.dataframe(df)
+st.dataframe(df, width=1000, height=500)
 
 
 
