@@ -25,7 +25,6 @@ grid_response = AgGrid(
     theme='blue', #Add theme color to the table
     enable_enterprise_modules=True,
     height=400, 
-    width='100%',
     reload_data=True
 )
 
