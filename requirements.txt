@@ -1,3 +1,4 @@
 openpyxl
 panda
 plotly
+streamlit
