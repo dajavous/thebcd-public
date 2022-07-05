@@ -1,4 +1,4 @@
 openpyxl
 panda
-st_aggrid
+streamlit_aggrid
 numpy
