@@ -9,16 +9,7 @@ df = pd.read_excel(excel_file,
 				usecols='A:E',
 				header=0)
 
-# CSS to inject contained in a string
-hide_dataframe_row_index = """
-            <style>
-            .row_heading.level0 {display:none}
-            .blank {display:none}
-            </style>
-            """
-
-# Inject CSS with Markdown
-st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
+df.style.hide_index()
 
 st.dataframe(df, width=1200, height=400)
 
