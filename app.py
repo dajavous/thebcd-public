@@ -9,8 +9,6 @@ df = pd.read_excel(excel_file,
 				usecols='A:E',
 				header=0)
 
-df.style.hide_index()
-
 st.dataframe(df, width=1200, height=400)
 
 
