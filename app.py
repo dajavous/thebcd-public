@@ -13,9 +13,9 @@ df = pd.read_excel(excel_file,
 				header=0)
 
 gb = GridOptionsBuilder.from_dataframe(df)
-
 gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 gb.configure_side_bar() #Add a sidebar
+gridOptions = gb.build()
 
 grid_response = AgGrid(
     df,
@@ -28,7 +28,6 @@ grid_response = AgGrid(
     height=500, 
     reload_data=True
 )
-
 
 
 
