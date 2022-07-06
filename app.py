@@ -27,6 +27,7 @@ gridOptions = gb.build()
 grid_response = AgGrid(
     df,
     gridOptions=gridOptions,
+    allow_unsafe_jscode=True,
     data_return_mode='AS_INPUT', 
     update_mode='MODEL_CHANGED', 
     fit_columns_on_grid_load=False,
