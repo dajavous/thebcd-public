@@ -13,9 +13,15 @@ df = pd.read_excel(excel_file,
 				header=0)
 
 gb = GridOptionsBuilder.from_dataframe(df)
+
+cell_renderer =  JsCode("""
+function(params) {return `<a href=${params.value} target="_blank">${params.value}</a>`}
+""")
+gb.configure_column("ISSUE", cellRenderer=cell_renderer)
+gridOptions = gb.build()
+
 gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 gb.configure_side_bar() #Add a sidebar
-gridOptions = gb.build()
 
 grid_response = AgGrid(
     df,
