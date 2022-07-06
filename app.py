@@ -1,4 +1,5 @@
 import pandas as pd
+import js2py
 import streamlit as st
 st.set_page_config(layout="wide")
 import numpy as np
