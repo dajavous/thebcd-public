@@ -1,5 +1,4 @@
 import pandas as pd
-import js2py
 import streamlit as st
 st.set_page_config(layout="wide")
 import numpy as np
@@ -14,21 +13,6 @@ df = pd.read_excel(excel_file,
 				header=0)
 
 gb = GridOptionsBuilder.from_dataframe(df)
-
-js = """
-var output;
-document = {
-    write: function(value){
-        output = value;
-    }
-}
-function(params) {return `<a href=${params.value} target="_blank">${params.value}</a>`}"""
-
-context = js2py.EvalJs()
-cell_renderer = context.execute(js)
-
-gb.configure_column("ISSUE", cellRenderer=cell_renderer)
-gridOptions = gb.build()
 
 gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 gb.configure_side_bar() #Add a sidebar
