@@ -18,7 +18,7 @@ gb.configure_side_bar() #Add a sidebar
 
 gb.configure_column("ISSUE",
                             headerName="ISSUE",
-                            cellRenderer=JsCode('''function(params) {return '<a href="https://www.google.com">params.value</a>'}'''),
+                            cellRenderer=JsCode('''function(params) {return '<a href=params.value</a>'}'''),
                             width=300)
 
 
