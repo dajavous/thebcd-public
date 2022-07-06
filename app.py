@@ -18,10 +18,8 @@ gb.configure_side_bar() #Add a sidebar
 
 gb.configure_column("ISSUE",
                             headerName="ISSUE",
-                            cellRenderer=JsCode('''function(params) {return '<a href=params.value</a>'}'''),
+                            cellRenderer=JsCode('''function(params) {return '<a href="https://members.thebcd.co.uk/' + params.value + '" target="_blank">'+ params.value+'</a>'}'''),
                             width=300)
-
-
 gridOptions = gb.build()
 
 grid_response = AgGrid(
