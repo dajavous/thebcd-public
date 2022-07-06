@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 st.set_page_config(layout="wide")
 import numpy as np
-from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
+from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
 
 excel_file = 'Newsletter-and-Magazine-Index.xlsx'
 sheet_name = 'Sheet1'
@@ -15,6 +15,13 @@ df = pd.read_excel(excel_file,
 gb = GridOptionsBuilder.from_dataframe(df)
 gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 gb.configure_side_bar() #Add a sidebar
+
+gb.configure_column("ISSUE",
+                            headerName="ISSUE",
+                            cellRenderer=JsCode('''function(params) {return '<a href="https://www.google.com">params.value</a>'}'''),
+                            width=300)
+
+
 gridOptions = gb.build()
 
 grid_response = AgGrid(
