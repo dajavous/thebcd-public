@@ -15,9 +15,18 @@ df = pd.read_excel(excel_file,
 
 gb = GridOptionsBuilder.from_dataframe(df)
 
-cell_renderer =  JsCode("""
-function(params) {return `<a href=${params.value} target="_blank">${params.value}</a>`}
-""")
+js = """
+var output;
+document = {
+    write: function(value){
+        output = value;
+    }
+}
+function(params) {return `<a href=${params.value} target="_blank">${params.value}</a>`}"""
+
+context = js2py.EvalJs()
+cell_renderer = context.execute(js)
+
 gb.configure_column("ISSUE", cellRenderer=cell_renderer)
 gridOptions = gb.build()
 
