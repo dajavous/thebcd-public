@@ -14,7 +14,8 @@ df = pd.read_excel(excel_file,
 
 gb = GridOptionsBuilder.from_dataframe(df)
 gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
-gb.configure_side_bar(filters_panel=True, columns_panel=False)
+gb.configure_side_bar(filters_panel: bool = True, columns_panel: bool = False, defaultToolPanel: str = '')
+
 
 gb.configure_column("ISSUE",
                             headerName="ISSUE",
