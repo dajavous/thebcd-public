@@ -13,7 +13,7 @@ df = pd.read_excel(excel_file,
 				header=0)
 
 gb = GridOptionsBuilder.from_dataframe(df)
-gb.configure_pagination(paginationAutoPageSize=False) #Add pagination
+gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 gb.configure_side_bar()
 
 
