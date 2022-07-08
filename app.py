@@ -4,7 +4,7 @@ st.set_page_config(layout="wide")
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
 
-excel_file = 'Newsletter-and-Magazine-Index.xlsx'
+excel_file = 'country_capitals.xlsx'
 sheet_name = 'Sheet1'
 
 df = pd.read_excel(excel_file,
