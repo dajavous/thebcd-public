@@ -17,10 +17,7 @@ gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 gb.configure_side_bar()
 
 
-gb.configure_column("ISSUE",
-                            headerName="ISSUE",
-                            cellRenderer=JsCode('''function(params) {return '<a href="https://thebcd.co.uk/bcd_members_only/issue_' + params.value + '" target="_blank">'+ params.value+'</a>'}'''),
-                            width=300)
+
 gridOptions = gb.build()
 
 grid_response = AgGrid(
