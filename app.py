@@ -39,7 +39,7 @@ selected_theme = st.selectbox("Choose a different color theme for the table belo
 
 gb = GridOptionsBuilder.from_dataframe(df, enableRowGroup=True, enableValue=True, enablePivot=True)
 #gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
-#gb.configure_side_bar()
+gb.configure_side_bar()
 
 gb.configure_column("TYPE",
                             headerName="TYPE",
