@@ -37,7 +37,7 @@ components.html(hvar, height=0, width=0)
 available_themes = ["streamlit", "light", "dark", "blue", "fresh", "material"]
 selected_theme = st.selectbox("Choose a different color theme for the table below", available_themes)
 
-gb = GridOptionsBuilder.from_dataframe(df)
+gb = GridOptionsBuilder.from_dataframe(df, enableRowGroup=True, enableValue=True, enablePivot=True)
 #gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 #gb.configure_side_bar()
 
