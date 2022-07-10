@@ -34,7 +34,7 @@ gb = GridOptionsBuilder.from_dataframe(df)
 
 
 gb.configure_column("ISSUE",
-                            headerName="countrycapital",
+                            headerName="TYPE",
                             cellRenderer=JsCode('''function(params) {return '<a href="https://thebcd.co.uk" target="_blank">'Link</a>'}'''),
                             width=300)
 gridOptions = gb.build()
