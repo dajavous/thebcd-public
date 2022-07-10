@@ -28,6 +28,7 @@ with st.expander("Help on using the Index", expanded=True):
 
 hvar = """  <script>
 			var elements = window.parent.document.querySelectorAll('.streamlit-expanderHeader');
+			elements[0].style.fontSize = 'large';
 			elements[0].style.fontWeight = 'bold';
 	    </script>"""
 
