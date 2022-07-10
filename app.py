@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 st.set_page_config(layout="wide")
+import streamlit.components.v1 as components
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
 st.subheader(" Index")
