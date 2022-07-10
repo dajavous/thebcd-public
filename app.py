@@ -6,7 +6,7 @@ from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 st.subheader(" Index")
 excel_file = 'country_capitals.xlsx'
 sheet_name = 'Sheet1'
-#@st.cache
+
 df = pd.read_excel(excel_file,
 				   sheet_name=sheet_name,
 				   usecols='A:E',
