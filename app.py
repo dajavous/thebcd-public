@@ -25,6 +25,13 @@ with st.expander("Help on using the Index", expanded=True):
 	- Click on "Help on using the Index" above to open or close this help box.
      """)
 
+hvar = """  <script>
+			var elements = window.parent.document.querySelectorAll('.streamlit-expanderHeader');
+			elements[0].style.fontWeight = 'bold';
+	    </script>"""
+
+components.html(hvar, height=0, width=0)
+
 available_themes = ["streamlit", "light", "dark", "blue", "fresh", "material"]
 selected_theme = st.selectbox("Choose a different color theme for the table below", available_themes)
 
