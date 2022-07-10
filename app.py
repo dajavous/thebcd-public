@@ -32,11 +32,6 @@ gb = GridOptionsBuilder.from_dataframe(df)
 #gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 #gb.configure_side_bar()
 
-
-gb.configure_column("ISSUE",
-                            headerName="TYPE",
-                            cellRenderer=JsCode('''function(params) {return '<a href="https://thebcd.co.uk" target="_blank">'Link</a>'}'''),
-                            width=300)
 gridOptions = gb.build()
 
 grid_response = AgGrid(
