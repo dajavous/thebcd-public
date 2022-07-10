@@ -19,8 +19,8 @@ with st.expander("Help on using the Index", expanded=True):
 	by clicking and dragging, and remove columns by dragging off the page.
 	- Hover over a column heading and click on the three-bar menu that appears in the column 
 	heading (or just long press on the heading with a tablet) to open the column search box.
-	- Tap on the index rows anywhere (other than links!) to hide the column search boxes.
-	- Change the theme to provide different colours and font sizes (also resets the index table to the starting view).
+	- Tap on the table rows anywhere (other than links!) to hide the column search boxes.
+	- Change the theme to provide different colours and font sizes (also resets the table to the starting view).
 	- Refresh the page to go back to the starting view of the index and theme.
 	- Click on "Help on using the Index" above to open or close this help box.
      """)
