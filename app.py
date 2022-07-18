@@ -41,6 +41,7 @@ gb = GridOptionsBuilder.from_dataframe(df)
 #gb.configure_side_bar()
 
 
+
 gridOptions = gb.build()
 
 grid_response = AgGrid(
@@ -58,20 +59,3 @@ grid_response = AgGrid(
 
 
 
-
-
-
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
