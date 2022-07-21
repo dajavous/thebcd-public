@@ -13,5 +13,7 @@ df = pd.read_excel(excel_file,
 				   usecols='A:D',
 				   header=0)
 
-st.dataframe(df)
+df2 = df.dtypes.astype(str)
+
+st.dataframe(df2)
 
