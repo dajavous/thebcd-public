@@ -4,7 +4,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
-st.subheader("Dummy full contents index - please wait for index to load")
+st.subheader("Full contents index - please wait for index to load")
 excel_file = 'melling_mags.xlsx'
 sheet_name = 'sheet1'
 
