@@ -11,8 +11,7 @@ sheet_name = 'sheet1'
 df = pd.read_excel(excel_file,
 				   sheet_name=sheet_name,
 				   usecols='A:D',
-		   		   dtype={'a':int64, 'b':str, 'c':str, 'd':int64}
-				   header=0)
+		   		   dtype={'a':int64, 'b':str, 'c':str, 'd':int64})
 
 
 
