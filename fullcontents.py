@@ -25,11 +25,9 @@ grid_response = AgGrid(
     df,
     gridOptions=gridOptions,
     allow_unsafe_jscode=True,
-    data_return_mode='AS_INPUT', 
-    update_mode='MODEL_CHANGED', 
+    reload_data=False,
     fit_columns_on_grid_load=False,
     theme='blue', #Add theme color to the table
     enable_enterprise_modules=False,
     height=650, 
-    reload_data=True
 )
