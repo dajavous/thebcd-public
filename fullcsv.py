@@ -8,10 +8,7 @@ st.subheader("Dummy Full contents index - please wait for index to load")
 excel_file = 'melling_mags.csv'
 sheet_name = 'sheet1'
 
-df = pd.read_csv(excel_file,
-				   sheet_name=sheet_name,
-				   usecols='A:D',
-				   header=0)
+df = pd.read_csv(excel_file)
 
 gb = GridOptionsBuilder.from_dataframe(df)
 gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
@@ -31,7 +28,3 @@ grid_response = AgGrid(
     enable_enterprise_modules=False,
     height=650, 
 )
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
