@@ -4,7 +4,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
-st.subheader("Dummy Full contents index - please wait for index to load")
+st.subheader("Penny Melling Magazines - Full Text Index")
 excel_file = 'melling_mags_short.csv'
 sheet_name = 'sheet1'
 
