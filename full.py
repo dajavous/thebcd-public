@@ -12,13 +12,9 @@ df = pd.read_csv(excel_file)
 
 with st.expander("Help on using the Index", expanded=True):
        st.write("""
-	- Using the column headings you can sort by clicking, rearrange columns and change column widths
-	  by clicking and dragging, and remove columns by dragging off the page.
 	- Hover over a column heading and click on the three-bar menu that appears in the column 
 	  heading (or just long press on the heading with a tablet) to open the column search box.
 	- Tap on the table rows anywhere (other than links!) to hide the column search boxes.
-	- Change the theme to provide different colours and font sizes (also resets the table to the starting view).
-	- Refresh the page to go back to the starting view of the table and theme.
 	- Click on "Help on using the Index" above to open or close this help box.
      """)
 
@@ -30,15 +26,9 @@ hvar = """  <script>
 
 components.html(hvar, height=0, width=0)
 
-available_themes = ["streamlit", "light", "dark", "blue", "fresh", "material"]
-selected_theme = st.selectbox("Choose a different color theme for the table below", available_themes)
-
-
 gb = GridOptionsBuilder.from_dataframe(df)
 gb.configure_pagination(paginationAutoPageSize=True) #Add pagination
 #gb.configure_side_bar()
-
-
 
 gridOptions = gb.build()
 
