@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-st.set_page_config(page_title="Dummy index")
+st.set_page_config(page_title="Dummy index",page_icon="favicon.ico")
 import streamlit.components.v1 as components
 import numpy as np
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode, JsCode
